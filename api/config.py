@@ -1,0 +1,8 @@
+from envparse import env
+
+env.read_envfile(".env")
+DATABASE_URL = env.str("DATABASE_URL")
+TRONPY_HTTP_PROVIDER_URI = env.str("TRONPY_HTTP_PROVIDER_URI")
+TRONPY_HTTP_API_KEY = env.str("TRONPY_HTTP_API_KEY")
+
+__all__ = ["DATABASE_URL", "TRONPY_HTTP_PROVIDER_URI", "TRONPY_HTTP_API_KEY"]
